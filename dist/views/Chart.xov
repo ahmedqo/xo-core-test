@@ -1,0 +1,31 @@
+<div class="{{classes.container}}">
+    <xo-radar-chart style="width:0;flex:1;" 
+        @load="
+            this.data = Array.from({length: Math.floor(Math.random() * 10) + 5},
+                        () => ({
+                                value: Math.floor(Math.random() * 40),
+                                label: 'label ' + Math.floor(Math.random() * 10)
+                            }));
+        ">
+    </xo-radar-chart>
+    <xo-pie-chart style="width:0;flex:1;" 
+        @load="
+            this.data = Array.from({length: Math.floor(Math.random() * 10) + 5},
+                        () => ({
+                                value: Math.floor(Math.random() * 40),
+                                label: 'label ' + Math.floor(Math.random() * 10)
+                            }));
+        ">
+    </xo-pie-chart>
+    <xo-grid-chart area style="width:100%;" 
+        @load="
+            this.data = Array.from({length: Math.floor(Math.random() * 10) + 5},
+                        () => ({
+                                value: Math.floor(Math.random() * 40),
+                                label: 'label ' + Math.floor(Math.random() * 10)
+                            }));
+            this.offset = {width: 50, height: 50};
+                                
+        ">
+    </xo-grid-chart>
+</div>

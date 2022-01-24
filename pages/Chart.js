@@ -15,6 +15,6 @@ export default class Chart {
     async render() {
         return await XOHtml({
             classes: useStyles()
-        })(`@{{include ${ChartPath}}}`);
+        })(`{*include ${ChartPath}*}`);
     }
 }

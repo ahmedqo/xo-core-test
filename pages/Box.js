@@ -13,6 +13,6 @@ export default class Box {
     async render() {
         return await XOHtml({
             classes: useStyles()
-        })(`@{{include ${BoxPath}}}`);
+        })(`{*include ${BoxPath}*}`);
     }
 }

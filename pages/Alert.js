@@ -13,6 +13,6 @@ export default class Alert {
     async render() {
         return await XOHtml({
             classes: useStyles()
-        })(`@{{include ${AlertPath}}}`);
+        })(`{*include ${AlertPath}*}`);
     }
 }

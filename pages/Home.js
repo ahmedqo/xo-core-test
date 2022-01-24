@@ -15,6 +15,6 @@ export default class Home {
     async render() {
         return await XOHtml({
             classes: useStyles(),
-        })(`@{{include ${HomePath}}}`);
+        })(`{*include ${HomePath}*}`);
     }
 }

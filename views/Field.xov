@@ -7,6 +7,40 @@
         <xo-user-icon size="24" slot="prefix"></xo-user-icon>
         <xo-user-icon size="24" slot="suffix"></xo-user-icon>    
     </xo-area>
+    <xo-select label="select Field" rounded>
+        <xo-user-icon size="24" slot="prefix"></xo-user-icon>
+        <xo-user-icon size="24" slot="suffix"></xo-user-icon>
+        <xo-select-item value="1">
+            <div>
+                <xo-user-icon size="24"></xo-user-icon>
+                test test test test test test 1
+            </div>
+        </xo-select-item>
+        <xo-select-item value="2">
+            <div>
+                <xo-user-icon size="24"></xo-user-icon>
+                test test test test test test 2
+            </div>
+        </xo-select-item>
+        <xo-select-item value="3">
+            <div>
+                <xo-user-icon size="24"></xo-user-icon>
+                test test test test test test 3
+            </div>
+        </xo-select-item>
+        <xo-select-item value="4">
+            <div>
+                <xo-user-icon size="24"></xo-user-icon>
+                test test test test test test 4
+            </div>
+        </xo-select-item>
+        <xo-select-item value="5">
+            <div>
+                <xo-user-icon size="24"></xo-user-icon>
+                test test test test test test 5
+            </div>
+        </xo-select-item>
+    </xo-select>
     <xo-number label="number Field" rounded>
         <xo-user-icon size="24" slot="prefix"></xo-user-icon>
         <xo-user-icon size="24" slot="suffix"></xo-user-icon>    

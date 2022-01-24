@@ -1,5 +1,16 @@
+#{{ this is a block html with variables }}
+@{{block test}}
+    <div>{{name}}</div>
+@{{/block}}
+
 <div class="{{classes.colContainer}}">
+    #{{ exec the block html with an object }}
+    @{{raw test with ({name:"test"})}}
+
+    #{{ set a variable }}
     @{{set themes = ["none", "water", "flame", "woods", "earth", "metal"]}}
+
+    #{{ an each loop }}
     @{{each themes as theme}}
         <xo-navbar theme="{{theme}}" key="{{$i}}">
             <xo-navbar-item slot="brand">LOGO</xo-navbar-item>

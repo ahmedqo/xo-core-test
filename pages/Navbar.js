@@ -1,6 +1,7 @@
 import { XOHtml } from "xo-core";
 import 'xo-core/Components/NavBar';
 import NavbarPath from '../views/Navbar.xov';
+import LoaderPath from '../views/Loader.xov';
 import useStyles from '../styles/styles';
 
 export default class Navbar {
@@ -12,7 +13,8 @@ export default class Navbar {
 
     async render() {
         return await XOHtml({
-            classes: useStyles()
+            classes: useStyles(),
+            LoaderPath
         })(`@{{include ${NavbarPath}}}`);
     }
 }

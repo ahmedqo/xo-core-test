@@ -126,6 +126,6 @@ export default class Icon {
     async render() {
         return await XOHtml({
             classes: useStyles(),
-        })(`{*include ${IconPath}*}`);
+        })(`{§include ${IconPath}§}`);
     }
 }

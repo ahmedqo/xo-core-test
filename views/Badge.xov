@@ -1,8 +1,8 @@
 <div class="{{classes.container}}">
-    {*set themes = ["none", "water", "flame", "woods", "earth", "metal"]*}
-    {*each themes as theme*}
+    {§set themes = ["none", "water", "flame", "woods", "earth", "metal"]§}
+    {§each themes as theme§}
         <xo-badge theme="{{theme}}" key="{{$i}}">
             John Doe
         </xo-badge>
-    {*/each*}
+    {§/each§}
 </div>

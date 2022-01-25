@@ -1,22 +1,22 @@
 {# this is a block html with variables #}
-{*block test*}
+{§block test§}
     <div>{{name}}</div>
-{*/block*}
+{§/block§}
 
 <div class="{{classes.colContainer}}">
     {# set a variable #}
-    {*set themes = ["none", "water", "flame", "woods", "earth", "metal"]*}
+    {§set themes = ["none", "water", "flame", "woods", "earth", "metal"]§}
     {#
         call the test block with object
-        {*raw test with ({name: "test"})*}
+        {§raw test with ({name: "test"})§}
     #}
     {# an each loop #}
-    {*each themes as theme*}
+    {§each themes as theme§}
         <xo-navbar theme="{{theme}}" key="{{$i}}">
             <xo-navbar-item slot="brand">LOGO</xo-navbar-item>
             <xo-navbar-item space="left">Link</xo-navbar-item>
             <xo-navbar-item>Link</xo-navbar-item>
             <xo-navbar-item space="up-left">Link</xo-navbar-item>
         </xo-navbar>
-    {*/each*}
+    {§/each§}
 </div>

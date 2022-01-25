@@ -22,6 +22,6 @@ export default class Field {
         return await XOHtml({
             classes: useStyles(),
             click(e) { console.log(e) }
-        })(`{*include ${FieldPath}*}`);
+        })(`{§include ${FieldPath}§}`);
     }
 }

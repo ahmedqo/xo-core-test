@@ -28,6 +28,6 @@ export default class Accordion {
         return await XOHtml({
             classes: useStyles(),
             randemize
-        })(`{*include ${AccordionPath}*}`);
+        })(`{§include ${AccordionPath}§}`);
     }
 }

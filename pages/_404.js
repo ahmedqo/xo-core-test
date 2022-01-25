@@ -12,6 +12,6 @@ export default class _404 {
     async render() {
         return await XOHtml({
             classes: useStyles()
-        })(`{*include ${_404Path}*}`);
+        })(`{§include ${_404Path}§}`);
     }
 }

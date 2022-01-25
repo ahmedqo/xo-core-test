@@ -13,6 +13,6 @@ export default class Loader {
     async render() {
         return await XOHtml({
             classes: useStyles()
-        })(`{*include ${LoaderPath}*}`);
+        })(`{§include ${LoaderPath}§}`);
     }
 }

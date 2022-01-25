@@ -15,6 +15,6 @@ export default class Navbar {
         return await XOHtml({
             classes: useStyles(),
             LoaderPath
-        })(`{*include ${NavbarPath}*}`);
+        })(`{§include ${NavbarPath}§}`);
     }
 }

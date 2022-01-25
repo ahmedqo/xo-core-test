@@ -13,6 +13,6 @@ export default class Badge {
     async render() {
         return await XOHtml({
             classes: useStyles()
-        })(`{*include ${BadgePath}*}`);
+        })(`{§include ${BadgePath}§}`);
     }
 }

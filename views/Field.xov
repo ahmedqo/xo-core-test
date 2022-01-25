@@ -1,13 +1,13 @@
 <div class="{{classes.colContainer}} {{classes.items}}">
-    <xo-text label="Text Field" rounded>
+    <xo-text label="Text Field">
         <xo-user-icon size="24" slot="prefix"></xo-user-icon>
         <xo-user-icon size="24" slot="suffix"></xo-user-icon>    
     </xo-text>
-    <xo-area label="area Field" rounded>
+    <xo-area label="area Field">
         <xo-user-icon size="24" slot="prefix"></xo-user-icon>
         <xo-user-icon size="24" slot="suffix"></xo-user-icon>    
     </xo-area>
-    <xo-select label="select Field" rounded>
+    <xo-select label="select Field">
         <xo-user-icon size="24" slot="prefix"></xo-user-icon>
         <xo-user-icon size="24" slot="suffix"></xo-user-icon>
         <xo-select-item value="1">
@@ -41,20 +41,20 @@
             </div>
         </xo-select-item>
     </xo-select>
-    <xo-number label="number Field" rounded>
+    <xo-number label="number Field">
         <xo-user-icon size="24" slot="prefix"></xo-user-icon>
         <xo-user-icon size="24" slot="suffix"></xo-user-icon>    
     </xo-number>
-    <xo-password label="password Field" rounded>
+    <xo-password label="password Field">
         <xo-user-icon size="24" slot="prefix"></xo-user-icon>
         <xo-user-icon size="24" slot="suffix"></xo-user-icon>    
     </xo-password>
     <div>
         <xo-rate @click="{{>click(100)}}"></xo-rate>
     </div>
-    <xo-switch-group rounded>
+    <xo-switch-group>
         <xo-switch></xo-switch>
         <xo-switch></xo-switch>
     </xo-switch-group>
-    <xo-button rounded>Click me</xo-button>
+    <xo-button>Click me</xo-button>
 </div>

@@ -1,8 +1,0 @@
-<div class="{{classes.container}}">
-    <xo-app-bar justify="between">
-        <h1 class="{{classes.m0}} {{classes.block}}">LOGO</h1>
-        <xo-icon-wrapper>
-            <xo-user-cog-icon size="24"></xo-user-cog-icon>
-        </xo-icon-wrapper>
-    </xo-app-bar>
-</div>

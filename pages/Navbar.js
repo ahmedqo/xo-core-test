@@ -4,14 +4,14 @@ import NavbarPath from '../views/Navbar.xov';
 import useStyles from '../styles/styles';
 
 export default class Navbar extends XOView {
-    static get props() {
+    props() {
         return {
             title: 'Navbar',
             template: NavbarPath
         }
     }
 
-    static get state() {
+    state() {
         return {
             classes: useStyles()
         }

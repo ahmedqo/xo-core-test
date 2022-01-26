@@ -6,14 +6,14 @@ import HomePath from '../views/Home.xov';
 import useStyles from '../styles/styles';
 
 export default class Home extends XOView {
-    static get props() {
+    props() {
         return {
             title: 'Home',
             template: HomePath
         }
     }
 
-    static get state() {
+    state() {
         return {
             classes: useStyles()
         }

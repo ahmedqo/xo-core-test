@@ -18,14 +18,14 @@ function randemize(length = 40) {
 }
 
 export default class Accordion extends XOView {
-    static get props() {
+    props() {
         return {
             title: 'Accordion',
             template: AccordionPath
         }
     }
 
-    static get state() {
+    state() {
         return {
             classes: useStyles(),
             randemize

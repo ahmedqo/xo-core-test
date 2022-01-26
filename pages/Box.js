@@ -4,14 +4,14 @@ import BoxPath from '../views/Box.xov';
 import useStyles from '../styles/styles';
 
 export default class Box extends XOView {
-    static get props() {
+    props() {
         return {
             title: 'Box',
             template: BoxPath
         }
     }
 
-    static get state() {
+    state() {
         return {
             classes: useStyles()
         }

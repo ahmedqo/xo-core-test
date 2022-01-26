@@ -3,14 +3,14 @@ import _404Path from '../views/404.xov';
 import useStyles from '../styles/styles';
 
 export default class _404 extends XOView {
-    static get props() {
+    props() {
         return {
             title: 'Not Found',
             template: _404Path
         }
     }
 
-    static get state() {
+    state() {
         return {
             classes: useStyles()
         }

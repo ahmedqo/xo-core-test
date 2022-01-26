@@ -49,8 +49,8 @@
         <xo-user-icon size="24" slot="prefix"></xo-user-icon>
         <xo-user-icon size="24" slot="suffix"></xo-user-icon>    
     </xo-password>
-    <div>
-        <xo-rate @click="{{>click(100)}}"></xo-rate>
+    <div @click="{{>click()}}">
+        <xo-rate></xo-rate>
     </div>
     <xo-switch-group>
         <xo-switch></xo-switch>

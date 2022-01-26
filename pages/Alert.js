@@ -4,14 +4,14 @@ import AlertPath from '../views/Alert.xov';
 import useStyles from '../styles/styles';
 
 export default class Alert extends XOView {
-    static get props() {
+    props() {
         return {
             title: 'Alert',
             template: AlertPath
         }
     }
 
-    static get state() {
+    state() {
         return {
             classes: useStyles()
         }

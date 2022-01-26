@@ -12,17 +12,19 @@ import FieldPath from '../views/Field.xov';
 import useStyles from '../styles/styles';
 
 export default class Field extends XOView {
-    static get props() {
+    props() {
         return {
             title: 'Field',
             template: FieldPath
         }
     }
 
-    static get state() {
+    state() {
         return {
             classes: useStyles(),
-            click(e) { console.log(e) }
+            click: (self) => {
+                console.log(self.classes);
+            }
         }
     }
 }

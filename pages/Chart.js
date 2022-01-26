@@ -6,14 +6,14 @@ import ChartPath from '../views/Chart.xov';
 import useStyles from '../styles/styles';
 
 export default class Chart extends XOView {
-    static get props() {
+    props() {
         return {
             title: 'Chart',
             template: ChartPath
         }
     }
 
-    static get state() {
+    state() {
         return {
             classes: useStyles()
         }

@@ -117,14 +117,14 @@ import IconPath from '../views/Icon.xov';
 import useStyles from '../styles/styles';
 
 export default class Icon extends XOView {
-    static get props() {
+    props() {
         return {
             title: 'Icon',
             template: IconPath
         }
     }
 
-    static get state() {
+    state() {
         return {
             classes: useStyles()
         }

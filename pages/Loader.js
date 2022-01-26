@@ -4,14 +4,14 @@ import LoaderPath from '../views/Loader.xov';
 import useStyles from '../styles/styles';
 
 export default class Loader extends XOView {
-    static get props() {
+    props() {
         return {
             title: 'Loader',
             template: LoaderPath
         }
     }
 
-    static get state() {
+    state() {
         return {
             classes: useStyles()
         }

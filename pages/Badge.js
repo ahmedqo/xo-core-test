@@ -4,14 +4,14 @@ import BadgePath from '../views/Badge.xov';
 import useStyles from '../styles/styles';
 
 export default class Badge extends XOView {
-    static get props() {
+    props() {
         return {
             title: 'Badge',
             template: BadgePath
         }
     }
 
-    static get state() {
+    state() {
         return {
             classes: useStyles()
         }

@@ -1,6 +1,6 @@
-import { XOStyle } from 'xo-core';
+import { XOSheet } from 'xo-core';
 
-export default XOStyle({
+export default XOSheet({
     _404: {
         width: '100%',
         height: '100vh',

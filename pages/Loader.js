@@ -1,18 +1,19 @@
-import { XOHtml } from "xo-core";
+import { XOView } from "xo-core";
 import 'xo-core/Components/Loader';
 import LoaderPath from '../views/Loader.xov';
 import useStyles from '../styles/styles';
 
-export default class Loader {
-    constructor(params, queries) {
-        this.param = params;
-        this.query = queries;
-        document.title = "Loader";
+export default class Loader extends XOView {
+    static get props() {
+        return {
+            title: 'Loader',
+            template: LoaderPath
+        }
     }
 
-    async render() {
-        return await XOHtml({
+    static get state() {
+        return {
             classes: useStyles()
-        })(`{§include ${LoaderPath}§}`);
+        }
     }
 }

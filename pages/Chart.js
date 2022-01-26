@@ -1,20 +1,21 @@
-import { XOHtml } from "xo-core";
+import { XOView } from "xo-core";
 import 'xo-core/Charts/Pie';
 import 'xo-core/Charts/Radar';
 import 'xo-core/Charts/Grid';
 import ChartPath from '../views/Chart.xov';
 import useStyles from '../styles/styles';
 
-export default class Chart {
-    constructor(params, queries) {
-        this.param = params;
-        this.query = queries;
-        document.title = "chart";
+export default class Chart extends XOView {
+    static get props() {
+        return {
+            title: 'Chart',
+            template: ChartPath
+        }
     }
 
-    async render() {
-        return await XOHtml({
+    static get state() {
+        return {
             classes: useStyles()
-        })(`{§include ${ChartPath}§}`);
+        }
     }
 }

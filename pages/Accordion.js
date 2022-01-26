@@ -1,4 +1,4 @@
-import { XOHtml } from "xo-core";
+import { XOView } from "xo-core";
 import 'xo-core/Components/Accordion';
 import AccordionPath from '../views/Accordion.xov';
 import useStyles from '../styles/styles';
@@ -17,17 +17,18 @@ function randemize(length = 40) {
     return rand();
 }
 
-export default class Accordion {
-    constructor(params, queries) {
-        this.param = params;
-        this.query = queries;
-        document.title = "Accordion";
+export default class Accordion extends XOView {
+    static get props() {
+        return {
+            title: 'Accordion',
+            template: AccordionPath
+        }
     }
 
-    async render() {
-        return await XOHtml({
+    static get state() {
+        return {
             classes: useStyles(),
             randemize
-        })(`{§include ${AccordionPath}§}`);
+        }
     }
 }

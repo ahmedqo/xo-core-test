@@ -1,4 +1,4 @@
-import { XOHtml } from "xo-core";
+import { XOView } from "xo-core";
 import 'xo-core/Icons/AlignCenter';
 import 'xo-core/Icons/Apartment';
 import 'xo-core/Icons/AreaChart';
@@ -116,16 +116,17 @@ import 'xo-core/Icons/Weather';
 import IconPath from '../views/Icon.xov';
 import useStyles from '../styles/styles';
 
-export default class Icon {
-    constructor(params, queries) {
-        this.param = params;
-        this.query = queries;
-        document.title = "Icon";
+export default class Icon extends XOView {
+    static get props() {
+        return {
+            title: 'Icon',
+            template: IconPath
+        }
     }
 
-    async render() {
-        return await XOHtml({
-            classes: useStyles(),
-        })(`{§include ${IconPath}§}`);
+    static get state() {
+        return {
+            classes: useStyles()
+        }
     }
 }

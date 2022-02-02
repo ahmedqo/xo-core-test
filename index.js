@@ -1,5 +1,5 @@
 import { XORouter, XOShape } from 'xo-core';
-import 'xo-core/Components/Container';
+import 'xo-core/Ui/Container';
 import 'xo-core/Components/NavBar';
 import 'xo-core/Components/Loader';
 import _404 from './pages/_404';

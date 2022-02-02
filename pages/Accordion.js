@@ -17,18 +17,11 @@ function randemize(length = 40) {
     return rand();
 }
 
-export default class Accordion extends XOView {
-    props() {
-        return {
-            title: 'Accordion',
-            template: AccordionPath
-        }
+export default XOView('Accordion', {
+    title: 'Accordion',
+    template: AccordionPath,
+    state: {
+        classes: useStyles(),
+        randemize
     }
-
-    state() {
-        return {
-            classes: useStyles(),
-            randemize
-        }
-    }
-}
+})

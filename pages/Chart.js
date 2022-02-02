@@ -5,17 +5,10 @@ import 'xo-core/Charts/Grid';
 import ChartPath from '../views/Chart.xov';
 import useStyles from '../styles/styles';
 
-export default class Chart extends XOView {
-    props() {
-        return {
-            title: 'Chart',
-            template: ChartPath
-        }
+export default XOView('Chart', {
+    title: 'Chart',
+    template: ChartPath,
+    state: {
+        classes: useStyles(),
     }
-
-    state() {
-        return {
-            classes: useStyles()
-        }
-    }
-}
+})

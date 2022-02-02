@@ -5,6 +5,9 @@ module.exports = {
     entry: {
         app: './index.js',
     },
+    devServer: {
+        historyApiFallback: true,
+    },
     plugins: [
         new HtmlWebpackPlugin({
             title: 'App',

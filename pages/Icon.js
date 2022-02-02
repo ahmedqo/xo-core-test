@@ -116,17 +116,10 @@ import 'xo-core/Icons/Weather';
 import IconPath from '../views/Icon.xov';
 import useStyles from '../styles/styles';
 
-export default class Icon extends XOView {
-    props() {
-        return {
-            title: 'Icon',
-            template: IconPath
-        }
+export default XOView('Icon', {
+    title: 'Icon',
+    template: IconPath,
+    state: {
+        classes: useStyles(),
     }
-
-    state() {
-        return {
-            classes: useStyles()
-        }
-    }
-}
+})

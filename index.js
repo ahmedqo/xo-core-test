@@ -13,6 +13,7 @@ import Home from './pages/Home';
 import Loader from './pages/Loader';
 import Navbar from './pages/Navbar';
 import Icon from './pages/Icon';
+import test from './pages/test';
 import './styles/style.css';
 
 XORouter("xo-container")
@@ -35,4 +36,5 @@ XORouter("xo-container")
     .add('/field', Field, Field.name)
     .add('/icon', Icon, Icon.name)
     .add('/404', _404, _404.name)
+    .add('/test', test, test.name)
     .run();

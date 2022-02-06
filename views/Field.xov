@@ -1,4 +1,20 @@
 <div class="{{classes.colContainer}} {{classes.items}}">
+    <xo-date label="Date Field" value="10-22-2010">
+        <xo-user-icon size="24" slot="prefix"></xo-user-icon>
+        <xo-user-icon size="24" slot="suffix"></xo-user-icon>    
+    </xo-date>
+    <xo-select label="select Field">
+        <xo-user-icon size="24" slot="prefix"></xo-user-icon>
+        <xo-user-icon size="24" slot="suffix"></xo-user-icon>
+        {§loop 20§}
+            <xo-select-item value="{{$i+1}}" key="{{$i}}">
+                <div style="display:flex;gap:1rem;align-items:center">
+                    <xo-user-icon size="24"></xo-user-icon>
+                    select option number {{$i+1}}
+                </div>
+            </xo-select-item>
+        {§/loop§}
+    </xo-select>
     <xo-text label="Text Field">
         <xo-user-icon size="24" slot="prefix"></xo-user-icon>
         <xo-user-icon size="24" slot="suffix"></xo-user-icon>    
@@ -22,44 +38,5 @@
         <xo-switch></xo-switch>
         <xo-switch></xo-switch>
     </xo-switch-group>
-    <xo-date label="Date Field" value="10-22-2010">
-        <xo-user-icon size="24" slot="prefix"></xo-user-icon>
-        <xo-user-icon size="24" slot="suffix"></xo-user-icon>    
-    </xo-date>
-    
-    <xo-select label="select Field" search="hidden">
-        <xo-user-icon size="24" slot="prefix"></xo-user-icon>
-        <xo-user-icon size="24" slot="suffix"></xo-user-icon>
-        <xo-select-item value="1">
-            <div>
-                <xo-user-icon size="24"></xo-user-icon>
-                test test test test test test 1
-            </div>
-        </xo-select-item>
-        <xo-select-item value="2">
-            <div>
-                <xo-user-icon size="24"></xo-user-icon>
-                test test test test test test 2
-            </div>
-        </xo-select-item>
-        <xo-select-item value="3" selected>
-            <div>
-                <xo-user-icon size="24"></xo-user-icon>
-                test test test test test test 3
-            </div>
-        </xo-select-item>
-        <xo-select-item value="4">
-            <div>
-                <xo-user-icon size="24"></xo-user-icon>
-                test test test test test test 4
-            </div>
-        </xo-select-item>
-        <xo-select-item value="5">
-            <div>
-                <xo-user-icon size="24"></xo-user-icon>
-                test test test test test test 5
-            </div>
-        </xo-select-item>
-    </xo-select>
     <xo-button>Click me</xo-button>
 </div>

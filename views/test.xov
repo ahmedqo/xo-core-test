@@ -1,0 +1,12 @@
+<div class="{{classes.colContainer}}">
+    <xo-number @change="{{>change()}}" value="{{$NUM}}" trigger="hidden" min="0" step="2" max="10" rounded readonly styles="{':host':{width:'200px'},'#xo-text':{textAlign:'center'}}">
+        <xo-button theme="flame" slot="prefix" @click="{{>minus()}}" rounded styles="{':host':{height:'unset'},'#xo-container':{padding:[.2,.2,'rem']}}">
+            <xo-minus-icon size="14" color="#fff"></xo-minus-icon>
+        </xo-button>
+        <xo-button theme="flame" slot="suffix" @click="{{>plus()}}" rounded styles="{':host':{height:'unset'},'#xo-container':{padding:[.2,.2,'rem']}}">
+            <xo-plus-icon size="14" color="#fff"></xo-plus-icon>
+        </xo-button>
+    </xo-number>
+    <xo-button theme="flame" rounded>Add to Cart</xo-button>
+    <h1 class="{{classes.m0}}">{{$NUM}}</h1>
+</div>

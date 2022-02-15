@@ -1,0 +1,14 @@
+{{extend views/Base.xov}}
+{{block content}}
+    <xo-toast-group>
+        <xo-toast theme="300">
+            #{{Math.random().toString().slice(2,-1)}} #{{Math.random().toString().slice(2,-1)}} 
+            #{{Math.random().toString().slice(2,-1)}} #{{Math.random().toString().slice(2,-1)}} 
+            #{{Math.random().toString().slice(2,-1)}} #{{Math.random().toString().slice(2,-1)}} 
+            #{{Math.random().toString().slice(2,-1)}} #{{Math.random().toString().slice(2,-1)}}    
+            #{{Math.random().toString().slice(2,-1)}} #{{Math.random().toString().slice(2,-1)}} 
+            #{{Math.random().toString().slice(2,-1)}} #{{Math.random().toString().slice(2,-1)}} 
+            #{{Math.random().toString().slice(2,-1)}} #{{Math.random().toString().slice(2,-1)}} 
+        </xo-toast>
+    </xo-toast-group>
+{{/block}}

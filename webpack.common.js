@@ -12,7 +12,6 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'App',
             filename: 'index.html',
-            //favicon: 'favicon.ico',
             template: 'index.html',
             inject: 'body'
         }),
@@ -20,6 +19,7 @@ module.exports = {
     output: {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
+        publicPath: "/",
         clean: true,
     },
     module: {

@@ -1,6 +1,4 @@
-<div class="{{classes.container}}">
-    {§set themes = ["none", "water", "flame", "woods", "earth", "metal"]§}
-    {§each themes as theme§}
-        <xo-loader theme="{{theme}}" key="{{$i}}"></xo-loader>
-    {§/each§}
-</div>
+{{extend views/Base.xov}}
+{{block content}}
+    <xo-loader theme="300"></xo-loader>
+{{/block}}

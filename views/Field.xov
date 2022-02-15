@@ -1,20 +1,4 @@
 <div class="{{classes.colContainer}} {{classes.items}}">
-    <xo-date label="Date Field" value="10-22-2010">
-        <xo-user-icon size="24" slot="prefix"></xo-user-icon>
-        <xo-user-icon size="24" slot="suffix"></xo-user-icon>    
-    </xo-date>
-    <xo-select label="select Field">
-        <xo-user-icon size="24" slot="prefix"></xo-user-icon>
-        <xo-user-icon size="24" slot="suffix"></xo-user-icon>
-        {§loop 20§}
-            <xo-select-item value="{{$i+1}}" key="{{$i}}">
-                <div style="display:flex;gap:1rem;align-items:center">
-                    <xo-user-icon size="24"></xo-user-icon>
-                    select option number {{$i+1}}
-                </div>
-            </xo-select-item>
-        {§/loop§}
-    </xo-select>
     <xo-text label="Text Field">
         <xo-user-icon size="24" slot="prefix"></xo-user-icon>
         <xo-user-icon size="24" slot="suffix"></xo-user-icon>    
@@ -31,12 +15,53 @@
         <xo-user-icon size="24" slot="prefix"></xo-user-icon>
         <xo-user-icon size="24" slot="suffix"></xo-user-icon>    
     </xo-password>
-    <div @click="{{>click()}}">
-        <xo-rate></xo-rate>
+    <div class="{{classes.container}}">
+        {{each theme in themes}}
+            <div theme="{{__key__.slice(1)}}" @click="{{#click()}}" @copy="{{#calCopy()}}" class="{{classes.theme}}" style="background: {{theme}}"></div>
+        {{/each}}
     </div>
-    <xo-switch-group>
-        <xo-switch></xo-switch>
-        <xo-switch></xo-switch>
+    <xo-date theme="300" label="Date Field">
+        <xo-user-icon size="24" slot="prefix"></xo-user-icon>
+        <xo-user-icon size="24" slot="suffix"></xo-user-icon>    
+    </xo-date>
+    <div class="{{classes.container}}">
+        {{each theme in themes}}
+            <div theme="{{__key__.slice(1)}}" @click="{{#click()}}" @copy="{{#selCopy()}}" class="{{classes.theme}}" style="background: {{theme}}"></div>
+        {{/each}}
+    </div>
+    <xo-select theme="300" label="Select Field">
+        <xo-user-icon size="24" slot="prefix"></xo-user-icon>
+        <xo-user-icon size="24" slot="suffix"></xo-user-icon>
+        {{loop 20}}
+            <xo-select-item value="{{__round__}}" key="{{__index__}}">
+                <div style="display:flex;gap:1rem;align-items:center">
+                    <xo-user-icon size="24"></xo-user-icon>
+                    select option number {{__round__}}
+                </div>
+            </xo-select-item>
+        {{/loop}}
+    </xo-select>
+       <div class="{{classes.container}}">
+        {{each theme in themes}}
+            <div theme="{{__key__.slice(1)}}" @click="{{#click()}}" @copy="{{#ratCopy()}}" class="{{classes.theme}}" style="background: {{theme}}"></div>
+        {{/each}}
+    </div>
+    <div>
+        <xo-rate theme="300" value="3"></xo-rate>
+    </div>
+    <div class="{{classes.container}}">
+        {{each theme in themes}}
+            <div theme="{{__key__.slice(1)}}" @click="{{#click()}}" @copy="{{#swiCopy()}}" class="{{classes.theme}}" style="background: {{theme}}"></div>
+        {{/each}}
+    </div>
+    <xo-switch-group theme="300">
+        <xo-switch checked>Switch 1</xo-switch>
+        <xo-switch>Switch 2</xo-switch>
     </xo-switch-group>
-    <xo-button>Click me</xo-button>
+    <div class="{{classes.container}}">
+        {{each theme in themes}}
+            <div theme="{{__key__.slice(1)}}" @click="{{#click()}}" @copy="{{#btnCopy()}}" class="{{classes.theme}}" style="background: {{theme}}"></div>
+        {{/each}}
+    </div>
+    <xo-button theme="300">test</xo-button>
 </div>

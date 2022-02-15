@@ -1,14 +1,5 @@
 <div class="{{classes.container}}">
-    <xo-radar-chart style="width:0;flex:1;" 
-        @load="
-            this.data = Array.from({length: Math.floor(Math.random() * 10) + 5},
-                        () => ({
-                                value: Math.floor(Math.random() * 40),
-                                label: 'label ' + Math.floor(Math.random() * 10)
-                            }));
-        ">
-    </xo-radar-chart>
-    <xo-pie-chart style="width:0;flex:1;" 
+    <xo-pie-chart header="Pie Chart" style="width: calc((100% / 2) - (1rem / 2))" 
         @load="
             this.data = Array.from({length: Math.floor(Math.random() * 10) + 5},
                         () => ({
@@ -17,7 +8,35 @@
                             }));
         ">
     </xo-pie-chart>
-    <xo-grid-chart area style="width:100%;" 
+    <xo-pie-chart header="Pie Chart Hollow" hollow style="width: calc((100% / 2) - (1rem / 2))" 
+        @load="
+            this.data = Array.from({length: Math.floor(Math.random() * 10) + 5},
+                        () => ({
+                                value: Math.floor(Math.random() * 40),
+                                label: 'label ' + Math.floor(Math.random() * 10)
+                            }));
+        ">
+    </xo-pie-chart>
+    <div class="{{classes.container}}">
+        {{each theme in themes}}
+            <div theme="{{__key__.slice(1)}}" @click="{{#click()}}" @copy="{{#radCopy()}}" class="{{classes.theme}}" style="background: {{theme}}"></div>
+        {{/each}}
+    </div>
+    <xo-radar-chart theme="300" header="Radar Chart" area style="width:100%;"
+        @load="
+            this.data = Array.from({length: Math.floor(Math.random() * 10) + 5},
+                        () => ({
+                                value: Math.floor(Math.random() * 40),
+                                label: 'label ' + Math.floor(Math.random() * 10)
+                            }));
+        ">
+    </xo-radar-chart>
+    <div class="{{classes.container}}">
+        {{each theme in themes}}
+            <div theme="{{__key__.slice(1)}}" @click="{{#click()}}" @copy="{{#griCopy()}}" class="{{classes.theme}}" style="background: {{theme}}"></div>
+        {{/each}}
+    </div>
+    <xo-grid-chart theme="300" header="Grid Chart" axis="['Week Days', 'Product Sells']" line dots style="width:100%;" 
         @load="
             this.data = Array.from({length: Math.floor(Math.random() * 10) + 5},
                         () => ({

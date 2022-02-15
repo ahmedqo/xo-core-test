@@ -1,0 +1,9 @@
+<div class="{{classes.container}}">
+    <div class="{{classes.container}}">
+        {{each theme in themes}}
+            {{define name = __key__.slice(1)}}
+            <div @click="{{#click()}}" @copy="{{#copy(:name)}}" key="{{('color theme ' + __index__:[kebab])}}" class="{{classes.theme}}" style="background: {{theme}}"></div>
+        {{/each}}
+    </div>
+    {{__content__}}
+</div>

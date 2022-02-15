@@ -1,40 +1,46 @@
-import { XODom, XOView } from "xo-core";
+import { XOBuild, XOView } from "xo-core";
 import 'xo-core/Fields/Number';
-import 'xo-core/Fields/Button';
+import 'xo-core/Components/Button';
+import 'xo-core/Components/Await';
+import 'xo-core/Components/Badge';
+import 'xo-core/Ui/Grid';
 import 'xo-core/Icons/Plus';
 import 'xo-core/Icons/Minus';
+import 'xo-core/Icons/Times';
 import testPath from '../views/test.xov';
 import useStyles from '../styles/styles';
-import store from '../store'
-
-var $NUM = 0;
-store.on('plus', function() {
-    $NUM += 1;
-    XODom("xo-number").val($NUM);
-});
-store.on('minus', function() {
-    $NUM -= 1;
-    XODom("xo-number").val($NUM);
-});
-store.on('show', function() {
-    $NUM = XODom("xo-number").val();
-    XODom("h1").htm($NUM);
-})
+import '../store';
 
 export default XOView('test', {
     title: 'test',
     template: testPath,
     state: {
-        $NUM: $NUM,
         classes: useStyles(),
-        plus: () => {
-            window.store.emit('plus');
+        data: async function() {
+            return await new Promise(res => {
+                setTimeout(() => {
+                    var arr = Array.from({ length: 10 }).map((_, i) => "<xo-badge theme=\'300\' style=\"width: calc((100% / 5) - ((1rem * (5 - 1)) / 5))\">User " + (i + 1) + "</xo-badge>");
+                    res(arr.join(""));
+                }, 5000);
+            })
         },
-        minus: () => {
-            window.store.emit("minus");
+        plus: function() {
+            store.emit('plus');
         },
-        change: () => {
-            window.store.emit('show');
+        minus: function() {
+            store.emit("minus");
+        },
+        change: function() {
+            store.emit('change');
+        },
+        clear: function() {
+            store.emit('clear');
+        },
+        click_plus: function() {
+            store.emit('click_plus');
+        },
+        click_minus: function() {
+            store.emit('click_minus');
         }
     }
 });

@@ -21,6 +21,7 @@ export default XOSheet({
     },
     container: {
         maxWidth: '1200px',
+        width: '100%',
         flexWrap: 'wrap',
         display: 'flex',
         margin: 'auto',
@@ -60,5 +61,17 @@ export default XOSheet({
     },
     block: {
         display: 'block',
+    },
+    theme: {
+        height: '30px',
+        width: 'calc((100% / 6) - (5rem / 6))',
+        borderRadius: '.5rem',
+        fontSize: '1rem',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    center: {
+        alignItems: 'center',
     }
 });

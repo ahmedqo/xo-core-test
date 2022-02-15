@@ -1,7 +1,8 @@
 import { XOView } from "xo-core";
-import 'xo-core/Components/Accordion';
+import 'xo-core/Components/AccordionGroup';
 import AccordionPath from '../views/Accordion.xov';
 import useStyles from '../styles/styles';
+import themes from '../com';
 
 function randemize(length = 40) {
     function rand() {
@@ -22,6 +23,15 @@ export default XOView('Accordion', {
     template: AccordionPath,
     state: {
         classes: useStyles(),
-        randemize
+        themes: themes,
+        randemize,
+        copy: (_, theme) => {
+            navigator.clipboard
+                .writeText(`<xo-accordion theme="${theme}" header="">\n\t\n</xo-accordion>`);
+        },
+        click: () => {
+            document.execCommand("copy");
+            store.emit("toast", "Copied!", { theme: 'woods.500', timing: 5000 });
+        }
     }
 })

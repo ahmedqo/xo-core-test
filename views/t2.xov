@@ -1,0 +1,18 @@
+{{extend views/t0.xov}}
+{{block header}}
+    <header onclick="{{#click(100)}}">
+        {{if title}}
+            <h1>{{ title }}</h1>
+        {{/if}}
+    </header>
+{{/block}}
+{{block content}}
+    <section>
+        {{include views/t1.xov}}
+    </section>
+{{/block}}
+{{block footer}}
+    <footer>
+        <h2>footer here</h2>
+    </footer>
+{{/block}}

@@ -15,11 +15,11 @@
             document.querySelector("#loaderscript").remove();
         });
     </script>
-    <xo-navbar theme="flame">
+    <xo-navbar theme="flame.500">
         <xo-navbar-item slot="brand" to="/" spa>LOGO</xo-navbar-item>
         <xo-navbar-item to="/navbar" spa>Navbar</xo-navbar-item>
         <xo-navbar-item to="/accordion" spa>Accordion</xo-navbar-item>
-        <xo-navbar-item to="/alert" spa>Alert</xo-navbar-item>
+        <xo-navbar-item to="/toast" spa>Toast</xo-navbar-item>
         <xo-navbar-item to="/box" spa>Box</xo-navbar-item>
         <xo-navbar-item to="/badge" spa>Badge</xo-navbar-item>
         <xo-navbar-item to="/loader" spa>Loader</xo-navbar-item>
@@ -28,6 +28,7 @@
         <xo-navbar-item to="/icon" spa>Icon</xo-navbar-item>
     </xo-navbar>
     <xo-container></xo-container>
+    <xo-toast-group id="toaster" styles="{':host':{position:'fixed',bottom:'1rem',right:'1rem',width:'30%',minWidth:'300px'}}"></xo-toast-group>
 </body>
 
 </html>

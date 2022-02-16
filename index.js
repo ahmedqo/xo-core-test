@@ -34,10 +34,10 @@ XORouter("xo-container")
     .add('/toast', Toast, Toast.name)
     .add('/box', Box, Box.name)
     .add('/badge', Badge, Badge.name)
-    .scope('/loader', (add) => [
-        add('/', Loader, Loader.name),
-        add('/{id:n}', Loader, Loader.name + 1),
-    ])
+    .scope('/loader', function() {
+        this.add('/', Loader, Loader.name);
+        this.add('/{id:n}', Loader, Loader.name + 1);
+    })
     .add('/chart', Chart, Chart.name)
     .add('/field', Field, Field.name)
     .add('/icon', Icon, Icon.name)

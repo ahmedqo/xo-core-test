@@ -5,10 +5,10 @@
     "main": "webpack.config.js",
     "scripts": {
         "start": "webpack serve --open --config webpack.dev.js",
-        "build": "webpack --config webpack.prod.js"
+        "build": "webpack --config webpack.prod.js && @powershell copy _redirects dist/_redirects"
     },
     "author": "",
-    "license": "ISC",
+    "license": "MIT",
     "dependencies": {
         "copy-webpack-plugin": "^10.2.0",
         "css-loader": "^6.5.1",
